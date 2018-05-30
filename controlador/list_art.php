@@ -4,14 +4,14 @@
 
 if ($productCount > 0) {
 	while($row = mysqli_fetch_array($productos)){ 
-		$src=$row["ruta"];
+		$src=$row["foto"];
 		$nom=$row["nombre"];
 		$prc=$row["precio"];
 		$id=$row["idproducto"];
 		$dynamicList .= '<div class="col-md-3">
 			<figure class="card card-product">
 				<div class="img-wrap">
-					<img src="'.$src.'">
+					<img src="'.$src.''.$nom.'0.jpg">
 					<a class="btn-overlay" href="producto.php?id='.$id.'">
 						<i class="fa fa-search-plus"></i> Quick view</a>
 				</div>
