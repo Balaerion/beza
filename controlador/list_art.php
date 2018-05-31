@@ -19,11 +19,13 @@ if ($productCount > 0) {
 					<h6 class="title text-dots">
 						<a style="color:#343a40" href="producto.php?id='.$id.'">'.$nom.'</a>
 					</h6>
-					<div class="action-wrap">
-						<button href="#" class="btn btn-warning btn-sm float-right">
+					<div class="action-wrap"><form class="product-form">
+						<input name="idproducto" type="hidden" value="'.$id.'">
+						<input name="product_qty" type="hidden" value="1">
+						<button type="submit" href="#" class="btn btn-warning btn-sm float-right">
 							<i class="fa fa-shopping-cart"></i>
 							Add to cart
-						</button>
+						</button></form>
 						<div class="price-wrap h3">
 							<span class="price-new">$'.$prc.'</span>
 						</div>

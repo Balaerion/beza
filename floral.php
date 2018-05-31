@@ -1,10 +1,11 @@
 <?php
+session_start();
 require_once("header.html");
 require_once("inciarsesion.php");
 require_once("registro.php");
 require("controlador/list_art.php");
 ?>
-
+<script type="text/javascript" src="js/cart.js"></script>
 <br>
 <br>
 <section class="section-content bg padding-y">

@@ -1,75 +1,108 @@
 <?php
+session_start();
 require_once("header.html");
 require_once("inciarsesion.php");
 require_once("registro.php");
+require_once("config.inc.php")
 ?>
+<script type="text/javascript" src="js/cart.js"></script>
 <br>
 <br>
 <section class="section-content bg padding-y border-top">
 	<div class="container">
 		<header class="section-heading text-center">
 			<h2 class="title-section"> Cart</h2>
-			<p class="lead">  </p>
+			<p class="lead"> </p>
 		</header>
 		<div class="row">
 			<main class="col-sm-9">
-
-				<div class="card">
-					<table class="table table-hover shopping-cart-wrap">
-						<thead class="text-muted">
-							<tr>
-								<th scope="col">Product</th>
-								<th scope="col" width="120">Quantity</th>
-								<th scope="col" width="120">Price</th>
-								<th scope="col" class="text-right" width="200">Action</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<figure class="media">
-										<div class="img-wrap">
-											<img src="images/items/1.jpg" class="img-thumbnail img-sm">
-										</div>
-										<figcaption class="media-body">
-											<h6 class="title text-truncate">Product name goes here </h6>
-											<dl class="dlist-inline small">
-												<dt>Size: </dt>
-												<dd>XXL</dd>
-											</dl>
-											<dl class="dlist-inline small">
-												<dt>Color: </dt>
-												<dd>Orange color</dd>
-											</dl>
-										</figcaption>
-									</figure>
-								</td>
-								<td>
-									<select class="form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-									</select>
-								</td>
-								<td>
-									<div class="price-wrap">
-										<var class="price">USD 145</var>
-										<small class="text-muted">(USD5 each)</small>
-									</div>
-									<!-- price-wrap .// -->
-								</td>
-								<td class="text-right">
-									<a data-original-title="Save to Wishlist" title="" href="" class="btn btn-outline-success" data-toggle="tooltip">
-										<i class="fa fa-heart"></i>
-									</a>
-									<a href="" class="btn btn-outline-danger"> × Remove</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				<div class="text-left">
+					<div class="col-md-8">
+						<?php		
+						if(isset($_SESSION["products"]) && count($_SESSION["products"])>0) { 
+						?>
+							<table class="table" id="shopping-cart-results">
+								<thead>
+									<tr>
+										<th>Product</th>
+										<th>Price</th>
+										<th>Quantity</th>
+										<th>Subtotal</th>
+										<th>&nbsp;</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+										$cart_box = '<ul class="cart-products-loaded">';
+										$total = 0;
+										foreach($_SESSION["products"] as $product){					
+											$nombre = $product["nombre"]; 
+											$precio = $product["precio"];
+											$idproducto = $product["idproducto"];
+											$product_qty = $product["product_qty"];
+											$subtotal = ($precio * $product_qty);
+											$total = ($total + $subtotal);
+									?>
+										<tr>
+											<td>
+												<?php echo $nombre;?>
+											</td>
+											<td>
+												<?php echo $precio; ?>
+											</td>
+											<td>
+												<input type="number" data-code="<?php echo $idproducto; ?>" class="form-control text-center quantity" value="<?php echo $product_qty; ?>">
+											</td>
+											<td>
+												<?php echo $currency; echo sprintf("%01.2f", ($precio * $product_qty)); ?>
+											</td>
+											<td>
+												<a href="#" class="btn btn-danger remove-item" data-code="<?php echo $idproducto; ?>">
+													<i class="glyphicon glyphicon-trash"></i>
+												</a>
+											</td>
+										</tr>
+										<?php } ?>
+										<tfoot>
+											<br>
+											<br>
+											<tr>
+												<td>
+													<a href="index.php" class="btn btn-warning">
+														<i class="glyphicon glyphicon-menu-left"></i> Continue Shopping</a>
+												</td>
+												<td colspan="2"></td>
+												<?php if(isset($total)) {?>
+												<td class="text-center cart-products-total">
+													<strong>Total
+														<?php echo $currency.sprintf("%01.2f",$total); ?>
+													</strong>
+												</td>
+												<td>
+													<a href="checkout.php" class="btn btn-success btn-block">Checkout
+														<i class="glyphicon glyphicon-menu-right"></i>
+													</a>
+												</td>
+												<?php } ?>
+											</tr>
+										</tfoot>
+										<?php } else { 	echo "Your Cart is empty";	?>
+										<tfoot>
+											<br>
+											<br>
+											<tr>
+												<td>
+													<a href="index.php" class="btn btn-warning">
+														<i class="glyphicon glyphicon-menu-left"></i> Continue Shopping</a>
+												</td>
+												<td colspan="2"></td>
+											</tr>
+										</tfoot>
+										<?php } ?>
+								</tbody>
+							</table>
+					</div>
 				</div>
-
 			</main>
 			<aside class="col-sm-3">
 				<p class="alert alert-success">Add USD 5.00 of eligible items to your order to qualify for FREE Shipping. </p>
