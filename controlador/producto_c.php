@@ -3,7 +3,7 @@ require_once("modelo/producto_m.php");
     $dynamicList = "";
 if ($productCount > 0) {
 	while($row = mysqli_fetch_array($productos)){ 
-		$src=$row["ruta"];
+		$src=$row["foto"];
 		$nom=$row["nombre"];
 		$prc=$row["precio"];
 		$id=$row["idproducto"];
@@ -13,8 +13,8 @@ if ($productCount > 0) {
 							<article class="gallery-wrap">
 								<div class="img-big-wrap">
 									<div>
-										<a href="'.$src.'" data-fancybox="">
-											<img src="'.$src.'">
+										<a href="'.$src.''.$nom.'0.jpg" data-fancybox="">
+											<img src="'.$src.''.$nom.'0.jpg">
 										</a>
 									</div>
 								</div>

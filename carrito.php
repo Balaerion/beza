@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("header.html");
+require_once("header.php");
 require_once("inciarsesion.php");
 require_once("registro.php");
 require_once("config.inc.php")
@@ -58,7 +58,7 @@ require_once("config.inc.php")
 											</td>
 											<td>
 												<a href="#" class="btn btn-danger remove-item" data-code="<?php echo $idproducto; ?>">
-													<i class="glyphicon glyphicon-trash"></i>
+													<i class="fa fa-trash"></i>
 												</a>
 											</td>
 										</tr>

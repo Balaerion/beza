@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -70,6 +74,9 @@
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#more">About Us</a>
                         </li>
+                        <?php
+                            if (isset($_SESSION['user'])) {
+                        ?>
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="carrito.php">Cart</a>
                         </li>
@@ -78,6 +85,15 @@
                                 Log In
                             </button>
                         </li>
+                        <?php
+                            } else { ?>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="carrito.php">Log off</a>
+                        </li>        
+                        <?php
+                            }
+                        ?>
+                        
                     </ul>
                 </div>
             </div>

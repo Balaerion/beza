@@ -1,5 +1,5 @@
 <?php
-require_once("header.html");
+require_once("header.php");
 require_once("inciarsesion.php");
 require_once("registro.php");
 require("controlador/list_art.php");

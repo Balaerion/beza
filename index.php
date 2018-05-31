@@ -1,5 +1,5 @@
 <?php
-	include_once("header.html");
+	include_once("header.php");
 	require_once("inciarsesion.php");
 	require_once("registro.php");
     ?>
