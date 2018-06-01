@@ -1,6 +1,6 @@
 <?php
-  include_once("../../modelo/Usuario.php");
-  include_once("../../modelo/Cliente.php");
+  include_once("../modelo/Usuario.php");
+  include_once("../modelo/Cliente.php");
   include_once("../uploader.php");
   $oUsuario = new Usuario();
   $oCliente = new Cliente();

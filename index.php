@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once("header.php");
 	require_once("inciarsesion.php");
 	require_once("registro.php");

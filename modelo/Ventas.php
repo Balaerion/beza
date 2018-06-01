@@ -135,7 +135,7 @@
         $arrResultado=false;
             if ($oConexion->conectar())
             {
-                $sQuery = "SELECT * FROM `producto`	ORDER BY idproducto";
+                $sQuery = "SELECT * FROM `compra`";
                 $arrRS = $oConexion->ejecutarConsulta($sQuery);
                 $oConexion->desconectar();
                 if ($arrRS)

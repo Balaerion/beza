@@ -54,7 +54,7 @@ require_once("config.inc.php")
 												<input type="number" data-code="<?php echo $idproducto; ?>" class="form-control text-center quantity" value="<?php echo $product_qty; ?>">
 											</td>
 											<td>
-												<?php echo $currency; echo sprintf("%01.2f", ($precio * $product_qty)); ?>
+												<?php echo sprintf("%01.2f", ($precio * $product_qty)); ?>
 											</td>
 											<td>
 												<a href="#" class="btn btn-danger remove-item" data-code="<?php echo $idproducto; ?>">
@@ -75,11 +75,11 @@ require_once("config.inc.php")
 												<?php if(isset($total)) {?>
 												<td class="text-center cart-products-total">
 													<strong>Total
-														<?php echo $currency.sprintf("%01.2f",$total); ?>
+														<?php echo sprintf("%01.2f",$total); ?>
 													</strong>
 												</td>
 												<td>
-													<a href="checkout.php" class="btn btn-success btn-block">Checkout
+													<a href="compra.php" class="btn btn-success btn-block">Checkout
 														<i class="glyphicon glyphicon-menu-right"></i>
 													</a>
 												</td>

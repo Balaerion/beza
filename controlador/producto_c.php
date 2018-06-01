@@ -7,6 +7,7 @@ if ($productCount > 0) {
 		$nom=$row["nombre"];
 		$prc=$row["precio"];
 		$id=$row["idproducto"];
+		$qty=$row["canitdad"];
 		$dynamicList .= '<div class="card">
 					<div class="row no-gutters">
 						<aside class="col-sm-5 border-right">
@@ -19,20 +20,7 @@ if ($productCount > 0) {
 									</div>
 								</div>
 								<!-- slider-product.// -->
-								<div class="img-small-wrap">
-									<div class="item-gallery">
-										<img src="images/items/1.jpg">
-									</div>
-									<div class="item-gallery">
-										<img src="images/items/2.jpg">
-									</div>
-									<div class="item-gallery">
-										<img src="images/items/3.jpg">
-									</div>
-									<div class="item-gallery">
-										<img src="images/items/4.jpg">
-									</div>
-								</div>
+								
 								<!-- slider-nav.// -->
 							</article>
 							<!-- gallery-wrap .end// -->
@@ -55,19 +43,14 @@ if ($productCount > 0) {
 											aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
 									</dd>
 								</dl>
-								<dl class="row">
-									<dt class="col-sm-3">Model#</dt>
-									<dd class="col-sm-9">12345611</dd>
-
-									<dt class="col-sm-3">Color</dt>
-									<dd class="col-sm-9">Black and white </dd>
-
-									<dt class="col-sm-3">Delivery</dt>
-									<dd class="col-sm-9">Russia, USA, and Europe </dd>
-								</dl>								
-								<a href="#" class="btn  btn-warning"> Buy now </a>
-								<a href="#" class="btn  btn-outline-warning">
-									<i class="fas fa-shopping-cart"></i> Add to cart </a>
+								<form class="product-form">
+									<input name="idproducto" type="hidden" value="'.$id.'">
+									<input name="product_qty" type="number" min="1" max="'.$qty.'" value="1">
+									<button type="submit" href="#" class="btn btn-warning btn-lg btn-block">
+										<i class="fa fa-shopping-cart"></i>
+										Add to cart
+									</button>
+								</form>							
 							</article>
 						</aside>
 					</div>

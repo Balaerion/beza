@@ -1,9 +1,11 @@
 <?php
+session_start();
 require_once("header.php");
 require_once("inciarsesion.php");
 require_once("registro.php");
 require_once("controlador/producto_c.php");
 ?>
+<script type="text/javascript" src="js/cart.js"></script>
 <br>
 <br>
 <section class="section-content bg padding-y">

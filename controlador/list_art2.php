@@ -1,5 +1,5 @@
 <?php
-    require("modelo/listaarticulos2.php");
+    require("modelo/listaarticulos.php");
     $dynamicList = "";
 
 if ($productCount > 0) {

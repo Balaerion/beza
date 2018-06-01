@@ -13,7 +13,7 @@
 
   $conexion=new conexion();
   if ($conexion->conectar()){
-     $query_1 = "INSERT INTO `usuario`(`idusuario`,`passwd`, `usuario`, `tipo`) VALUES (DEFAULT,'$form_Pass','$form_User','Usuario')";
+     $query_1 = "INSERT INTO `usuario`(`idusuario`,`passwd`, `usuario`, `tipo`) VALUES (DEFAULT,'$form_Pass','$form_User','usuario')";
 
      $query_2 = "INSERT INTO `cliente`(`usuario_idusuario`, `nombre`, `appat`, `apmat`, `tel`, `dir`, `banc`) VALUES ((SELECT `idusuario` FROM `usuario` WHERE `usuario` = '$form_User'),'$form_Name','$form_FName','$form_SName','$form_Tel','$form_Address','$form_Bank_Account')";
      $nAfectados = $conexion->ejecutarComando($query_1);

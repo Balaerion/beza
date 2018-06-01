@@ -7,7 +7,7 @@
   {
     private $idFoto = 0;
     private $nombre = "";
-    private $foto = "../img/";
+    private $foto = "img/";
     private $idproducto = 0;
 
 

@@ -3,7 +3,7 @@ session_start();
 require_once("header.php");
 require_once("inciarsesion.php");
 require_once("registro.php");
-require("controlador/list_art.php");
+require("controlador/list_art2.php");
 ?>
 <script type="text/javascript" src="js/cart.js"></script>
 <br>
