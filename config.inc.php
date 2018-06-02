@@ -1,5 +1,4 @@
 <?php
-$currency = '&#8377; ';
 $shipping_cost = 1.50;
 $taxes	= array(
 	'VAT' => 12, 

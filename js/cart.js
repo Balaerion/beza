@@ -26,7 +26,8 @@ $(document).ready(function () {
             dataType: "json",
             data: form_data
         }).done(function (data) {
-            button_content.html('Add to Cart');
+            alert('New product in the shooping cart');
+            window.location.reload();
         }).fail(function (data) {
             console.log("lel");
         })

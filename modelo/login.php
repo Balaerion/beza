@@ -12,6 +12,7 @@
       echo json_encode(array('error'=>false,'tipo'=>$datos['tipo']));
        $_SESSION['user'] = $datos['usuario'];
        $_SESSION['iduser'] = $datos['idusuario'];
+       $_SESSION['tipo'] = $datos['tipo'];
   else:
       echo json_encode(array('error'=>true));
   endif;

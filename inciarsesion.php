@@ -8,6 +8,8 @@
                 </button>
             </div>
             <div class="modal-body">
+                <div id="alerta">
+                </div>
                 <form id="formLg">
                     <div class="form-group">
                         <div class="input-group">

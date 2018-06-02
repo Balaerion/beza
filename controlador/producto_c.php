@@ -7,7 +7,7 @@ if ($productCount > 0) {
 		$nom=$row["nombre"];
 		$prc=$row["precio"];
 		$id=$row["idproducto"];
-		$qty=$row["canitdad"];
+		$qty=$row["cantidad"];
 		$dynamicList .= '<div class="card">
 					<div class="row no-gutters">
 						<aside class="col-sm-5 border-right">

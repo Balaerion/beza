@@ -1,5 +1,5 @@
 <?php 
-  include_once("header.html");
+  include_once("header.php");
 ?>
 
 <div class="table-responsive">

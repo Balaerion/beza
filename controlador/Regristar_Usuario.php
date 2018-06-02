@@ -20,5 +20,6 @@
      $nAfectados = $conexion->ejecutarComando($query_2);
      $conexion->desconectar();
   }
+  header('Location: index.php');
 
 ?>

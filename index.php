@@ -49,7 +49,7 @@
 
 			<header class="section-heading text-center">
 				<h2 class="title-section">How it works </h2>
-				<p class="lead"> Good sub heading this sounded nonsense to Alice </p>
+				<p class="lead"> Let's explain how we do things around here </p>
 			</header>
 			<!-- sect-heading -->
 
@@ -60,8 +60,8 @@
 							<i class="fa fa-envelope-open"></i>
 						</span>
 						<figcaption class="text-wrap">
-							<h4 class="title">Sync across all devices</h4>
-							<p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise.</p>
+							<h4 class="title">Free Shipping</h4>
+							<p>If you’re shipping within the USA, we’ll deliver your gear absolutely free.</p>
 						</figcaption>
 					</figure>
 					<!-- iconbox // -->
@@ -73,8 +73,8 @@
 							<i class="fa fa-heart"></i>
 						</span>
 						<figcaption class="text-wrap">
-							<h4 class="title">Easy to Customize</h4>
-							<p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise. </p>
+							<h4 class="title">Handmade</h4>
+							<p>All our products are handmade. Made with love just for you</p>
 						</figcaption>
 					</figure>
 					<!-- iconbox // -->
@@ -86,8 +86,8 @@
 							<i class="fa fa-users"></i>
 						</span>
 						<figcaption class="text-wrap">
-							<h4 class="title">Unique Interface Design</h4>
-							<p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise. </p>
+							<h4 class="title">Community</h4>
+							<p>Help us to create a community by sending us a foto with your new tie. (:</p>
 						</figcaption>
 					</figure>
 					<!-- iconbox // -->
@@ -95,45 +95,13 @@
 				<!-- col.// -->
 			</div>
 			<!-- row.// -->
-
-			<p class="text-center">
-				<br>
-				<a href="#" class="btn btn-warning">Some action button</a>
-			</p>
-
 		</div>
 		<!-- container // -->
 	</section>
 	<!-- ========================= SECTION FEATURES END// ========================= -->
 
 	<!-- ========================= SECTION CONTENT  ========================= -->
-	<section id="content" class="section-content padding-y-lg">
-		<div class="container">
-
-			<header class="section-heading text-center">
-				<h2 class="title-section">Section name</h2>
-				<p class="lead"> Good sub heading this sounded nonsense to Alice </p>
-			</header>
-			<!-- sect-heading -->
-
-			<div class="row justify-content-center">
-				<article class="col-md-6 text-center">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-						irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</article>
-				<!-- col.// -->
-			</div>
-			<!-- row.// -->
-
-		</div>
-		<!-- container .//  -->
-	</section>
-	<!-- ========================= SECTION CONTENT  END// ========================= -->
+	
 
 
 	<!-- ========================= SECTION CONTENT ASIDE ========================= -->

@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['tipo']) or $_SESSION['tipo']=='usuario'){
+      header('Location: ../../index.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -18,11 +18,14 @@ jQuery(document).on('submit', '#formLg', function (event) {
           location.href = 'index.php';
         }
       } else {
-        $('#bt').html('Log In');
+        $('#bt').html('Log On');
+        $('#alerta').append('<div class="alert alert-danger alert-dismissible">' +
+          '<a href = "#" class = "close" data - dismiss = "alert" aria-label = "close" > &times; </a>' +
+          '<strong> ERROR! </strong> Username or password are incorrect. </div>');
       }
     })
     .fail(function (resp) {
-      console.log(resp.responseText);
+      console.log(resp.responseText);      
     })
     .always(function () {
       console.log("complete");

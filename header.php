@@ -1,3 +1,9 @@
+    <?php
+  if ($_SESSION['tipo']=='Admin'){
+      header('Location: controlador/admin/listaclientes.php');
+  }
+
+?>
     <!DOCTYPE HTML>
     <html lang="en">
 
@@ -83,8 +89,6 @@
                                         <?php echo $_SESSION['user'] ?>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">My account</a>
-                                        <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="cerrarsesion.php">Log out</a>
                                     </div>
                                 </li>

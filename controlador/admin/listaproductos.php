@@ -1,6 +1,6 @@
 
 <?php 
-  include_once("header.html");
+  include_once("header.php");
 ?>
           <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal2">
             <i class="fa fa-fw fa-plus-square"></i> ADD PRODUCT
@@ -30,10 +30,10 @@
   if ($arrProduc!=null){
     foreach($arrProduc as $oProduc){
 ?>      <tr>
-        <form action="ABCProducto.php" method="post">
+        <form action="ABCProducto.php" method="post" onsubmit="return confirm('Are you sure you want to submit this form?');">
         <td class="llave"><?php echo $oProduc->getIDProducto(); ?></td>
         <td><input class="form-control" id="exampleFormControlInput1" name="Name" placeholder="Nombre del Articulo" value = "<?php echo $oProduc->getNombre();?>" required="required"></td>
-        <td><input class="form-control" id="exampleFormControlInput1" name="Price" placeholder="Precio del Articulo" value = "<?php echo $oProduc->getPrecio();?>" required="required" pattern="([0-9]+|[0-9]+[.][0-9]+)"></td>
+        <td><input class="form-control" id="exampleFormControlInput1" name="Price" placeholder="Precio del Articulo" value = "<?php echo $oProduc->getPrecio();?>" required="required"></td>
         <td>
         <select class="form-control" name="Type" id="exampleFormControlSelect1">
         <option selected><?php echo $oProduc->getTipo();?></option>
@@ -84,7 +84,7 @@
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">Price</label>
-      <input class="form-control" id="exampleFormControlInput1" name="Price" placeholder="Precio del Articulo" required="required" pattern="([0-9]+|[0-9]+[.][0-9]+)">
+      <input class="form-control" id="exampleFormControlInput1" name="Price" placeholder="Precio del Articulo" required="required" >
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Type</label>
